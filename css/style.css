@@ -1,0 +1,241 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+h1, h2, p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Layout and Structure */
+header, footer, main {
+    padding: 10px 20px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #8e8e8e;
+    color: white;
+}
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  /* Style the topnav links */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change color on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+h1 {
+    font-size: 1.8em;
+    margin: 0.5em 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 15px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #f3f3f3;
+    color: #333;
+}
+
+/* Responsive Utility Classes */
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hidden-mobile {
+    display: none;
+}
+
+/* Content */
+main {
+    padding: 20px;
+}
+
+p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Athlete Card */
+.athlete-card {
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+}
+
+/* Table container styles */
+.table-container {
+    overflow-x: auto; /* Enables horizontal scrolling on small screens */
+    overflow-y: auto; /* Enables vertical scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+/* Table styles */
+.athlete-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+.athlete-table th,
+.athlete-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    white-space: nowrap; /* Prevents cell content from wrapping */
+}
+
+.athlete-table th {
+    position: sticky; /* Makes the header sticky */
+    top: 0; /* Positions it at the top of the table */
+    background-color: #007BFF; /* Header background color */
+    color: white; /* Header text color */
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #e0e0e0;
+}
+
+/* Adjust font sizes without a max-width */
+.athlete-table th,
+.athlete-table td {
+    font-size: 0.9em; /* Scales font slightly to fit on smaller screens */
+}
+
+/* Accessibility and Interactivity */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for the width of the link */
+    background-color: black;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Progress Bar */
+.progress {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.progress-bar {
+    height: 20px;
+    width: 70%;
+    background-color: #28a745;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+/* Collapsible Section */
+.collapsible {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.content {
+    display: none;
+    overflow: hidden;
+}
+
+.content.active {
+    display: block;
+}
+
+/* Centering skip links for smaller screens without max-width */
+@media screen and (min-width: 0px) {
+    .skip-link {
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Adjust for the width of the link */
+    }
+}
+
+#team-results table,
+#individual-results table {
+    margin: auto; /* Centers the table on the page */
+    width: 80%; /* Optional: Adjust width as needed */
+}
+
+/* Center the data within each table cell */
+#team-results table td, #team-results table th,
+#individual-results table td, #individual-results table th {
+    text-align: center;
+    padding: 8px; /* Optional: Adds some padding for readability */
+}
+
+/* Centering images, figures, and captions */
+.athlete figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Ensures text below image is centered */
+}
