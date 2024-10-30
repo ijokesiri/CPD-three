@@ -14,9 +14,15 @@ def generate_meets_list_page():
     <title>Meets List</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="default-mode">
     <a href="#main-content" class="skip-link">Skip to Main Content</a>
     <header>
+                        <!-- Theme Toggle Buttons -->
+        <div class="theme-toggle">
+            <button id="default-mode-toggle">Default Mode</button>
+            <button id="dark-mode-toggle">Dark Mode</button>
+            <button id="high-contrast-toggle">High Contrast</button>
+        </div>
         <h1>Meets List</h1>
         <div class="topnav">
             <a href="index.html">Home</a></li>
@@ -40,7 +46,7 @@ def generate_meets_list_page():
     html_content += '''
         </ul>
     </div>
-    <footer>
+    <footer class="default-mode">
         <p>Skyline High School</p>
     </footer>
 </body>
@@ -101,22 +107,19 @@ def gen_athlete_page(data, outfile):
         <!-- FontAwesome (Replace YOUR_ID with your own) -->
         <script src="https://kit.fontawesome.com/YOUR_ID.js" crossorigin="anonymous"></script>
         
-        <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
         
         <title>{data["name"]}</title>
     </head>
     <body>
+    <header class="athlete-header"> 
         <a href="#main">Skip to Main Content</a>
-        <nav>
-            <ul>
-                <li><a href="/index.html">Home Page</a></li>
-            </ul>
-        </nav>
-        <header>
-            <h1>{data["name"]}</h1>
-            <img src="../images/profiles/{data["athlete_id"]}.jpg" alt="Athlete headshot" width="200">
-        </header>
+        <div class="header-style">
+            <a href="/index.html">Home Page</a>
+        </div>
+        <h1>{data["name"]}</h1>
+        <img src="../images/profiles/{data["athlete_id"]}.jpg" alt="Athlete headshot" width="200">
+    </header>
         <main id="main">
             <section id="athlete-sr-table" class="table-container">
                 <h2>Athlete's Seasonal Records (SR) per Year</h2>
@@ -199,27 +202,38 @@ def generate_index_page():
     <title>Athlete Website: Home Page</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="default-mode">
     <a href="#main-content" class="skip-link">Skip to Main Content</a>
     <header>
+                <!-- Theme Toggle Buttons -->
+        <div class="theme-toggle">
+            <button id="default-mode-toggle">Default Mode</button>
+            <button id="dark-mode-toggle">Dark Mode</button>
+            <button id="high-contrast-toggle">High Contrast</button>
+        </div>
         <h1>Athlete Website</h1>
         <div class="topnav">
-            <a href="athletes.html">Athletes</a></li>
-            <a href="meets.html">Meets</a></li>
+            <a href="athletes.html">Athletes</a>
+            <a href="meets.html">Meets</a>
         </div>
     </header>
     <div id="main-content">
         <h2>Welcome to the Athlete Information Site</h2>
-        <p>This website provides information about athletes, their records, and upcoming meets.</p>
+        <p class="default-mode">This website provides information about athletes, their records, and upcoming meets.</p>
+        
     </div>
-    <footer>
+    <footer class="default-mode">
         <p>Skyline High School</p>
     </footer>
+
+    <!-- Link to External JavaScript File -->
+    <script src="js/script.js"></script>
 </body>
 </html>
 '''
     with open('index.html', 'w') as f:
         f.write(html_content)
+
 
 def generate_athletes_list_page(men_athletes, women_athletes):
     html_content = '''<!DOCTYPE html>

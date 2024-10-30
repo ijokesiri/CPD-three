@@ -9,14 +9,16 @@ body {
 }
 
 h1, h2, p {
-    margin: 0;
+    margin: 20px;
     padding: 0;
     text-align: center;
 }
 
 /* Layout and Structure */
 header, footer, main {
-    padding: 10px 20px;
+    text-align: center;
+    padding: 35px 20px;
+    margin: 30px 20px;
 }
 
 header {
@@ -26,32 +28,15 @@ header {
     background-color: #8e8e8e;
     color: white;
 }
-.topnav {
-    overflow: hidden;
-    background-color: #333;
-  }
-  
-  /* Style the topnav links */
-  .topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  /* Change color on hover */
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
 
-h1 {
-    font-size: 1.8em;
-    margin: 0.5em 0;
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #f3f3f3;
+    color: #333;
 }
 
+/* Navigation */
 nav ul {
     list-style: none;
     padding: 0;
@@ -73,25 +58,28 @@ nav a {
     text-decoration: none;
 }
 
-footer {
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Top Navigation Links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
     text-align: center;
-    padding: 15px;
-    background-color: #f3f3f3;
-    color: #333;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
-/* Responsive Utility Classes */
-.flex-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Top Navigation Hover Effect */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
 }
 
-.hidden-mobile {
-    display: none;
-}
-
-/* Content */
+/* Content Styles */
 main {
     padding: 20px;
 }
@@ -111,14 +99,22 @@ p {
     background-color: white;
 }
 
-/* Table container styles */
+/* Athlete Images */
+.athlete img {
+    width: 150px; /* Adjust width as needed */
+    height: 150px; /* Ensures square aspect ratio */
+    border-radius: 50%; /* Circular image */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    margin-bottom: 10px; /* Space between image and caption */
+}
+
+/* Table Styles */
 .table-container {
     overflow-x: auto; /* Enables horizontal scrolling on small screens */
     overflow-y: auto; /* Enables vertical scrolling */
     -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
 }
 
-/* Table styles */
 .athlete-table {
     width: 100%;
     border-collapse: collapse;
@@ -138,11 +134,6 @@ p {
     top: 0; /* Positions it at the top of the table */
     background-color: #007BFF; /* Header background color */
     color: white; /* Header text color */
-}
-
-thead th {
-    position: sticky;
-    top: 0;
 }
 
 tbody tr:nth-child(odd) {
@@ -174,6 +165,17 @@ tbody tr:nth-child(even) {
 
 .skip-link:focus {
     top: 0;
+}
+
+/* Responsive Utility Classes */
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hidden-mobile {
+    display: none;
 }
 
 /* Progress Bar */
@@ -211,14 +213,7 @@ tbody tr:nth-child(even) {
     display: block;
 }
 
-/* Centering skip links for smaller screens without max-width */
-@media screen and (min-width: 0px) {
-    .skip-link {
-        left: 50%; /* Center horizontally */
-        transform: translateX(-50%); /* Adjust for the width of the link */
-    }
-}
-
+/* Centering Tables for Results */
 #team-results table,
 #individual-results table {
     margin: auto; /* Centers the table on the page */
@@ -232,10 +227,213 @@ tbody tr:nth-child(even) {
     padding: 8px; /* Optional: Adds some padding for readability */
 }
 
-/* Centering images, figures, and captions */
+/* Centering Images, Figures, and Captions */
 .athlete figure {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center; /* Ensures text below image is centered */
+}
+
+/* Centering Info Section */
+.center-info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px; /* Adds space between each entry for readability */
+    background-color: rgba(255, 255, 255, 0.8); /* Light white background with some transparency */
+    padding: 16px; /* Adds space around the content */
+    border-radius: 8px; /* Rounds the corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
+}
+
+.center-info dl {
+    margin: 0;
+}
+
+.center-info dt {
+    font-weight: bold;
+    background-color: rgba(220, 220, 220, 0.8); /* Light grey background with some transparency */
+}
+
+.center-info dd {
+    margin: 0;
+}
+
+/* Athlete Header */
+.athlete-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #8e8e8e;
+    color: white;
+}
+
+/* Records and Results Table */
+.records-table th, .results-table th,
+.records-table td, .results-table td {
+    padding: 10px;
+    border: 1px solid #ccc; /* Add borders for readability */
+    text-align: left;
+}
+
+.records-table, .results-table {
+    width: 100%; /* Ensures full width */
+    border-collapse: collapse;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    display: flex;
+    justify-content: center; /* Centers the items in the nav */
+    align-items: center; /* Aligns items vertically */
+    background-color: #333; /* Background color for the navbar */
+    padding: 10px; /* Padding for spacing */
+}
+
+/* Button Styles */
+.btn {
+    padding: 10px 20px; /* Padding for button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #007BFF; /* Button background color */
+    color: white; /* Ensure the text color is white */
+    text-decoration: none; /* Remove underline from links */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
+
+/* Ensuring that the links in the list also appear as buttons */
+.navbar ul {
+    display: flex; /* Ensure the list items align horizontally */
+    padding: 0; /* Remove padding */
+}
+
+.navbar ul li {
+    list-style-type: none; /* Remove bullet points from list */
+    margin: 0 10px; /* Space between buttons */
+}
+
+/* Theme Toggle Buttons */
+.theme-toggle {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.theme-toggle button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.theme-toggle button:hover {
+    background-color: rgb(68, 68, 68);
+}
+
+/* Theme Modes */
+.default-mode {
+    background-color: white;
+    color: black;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+.high-contrast {
+    background-color: black;
+    color: yellow; /* High contrast text */
+}
+
+header.dark-mode {
+    background-color: #222; /* Dark background for header */
+    color: white; /* Light text color for header */
+}
+
+header.high-contrast {
+    background-color: black; /* Black background for header */
+    color: yellow; /* High contrast text color for header */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #f8f9fa; /* Default light background */
+    color: #212529; /* Default text color */
+    padding: 10px;
+    text-align: center;
+}
+
+footer.dark-mode {
+    background-color: #222; /* Dark background for footer */
+    color: white; /* Light text color for footer */
+}
+
+footer.high-contrast {
+    background-color: black; /* Black background for footer */
+    color: yellow; /* High contrast text color for footer */
+}
+
+/* Default Theme Styles */
+
+
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+}
+
+header.dark-mode, footer.dark-mode {
+    background-color: #1e1e1e; /* Darker background for header and footer */
+    color: #e0e0e0; /* Light text for header and footer */
+}
+
+/* High Contrast Mode Styles */
+body.high-contrast {
+    background-color: black; /* Black background */
+    color: yellow; /* Yellow text for visibility */
+}
+
+header.high-contrast, footer.high-contrast {
+    background-color: #000000; /* Black background for header and footer */
+    color: yellow; /* High contrast text */
+}
+
+/* Additional Styles for Elements */
+main {
+    padding: 20px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Button Hover Effects */
+button:hover {
+    opacity: 0.8; /* Slightly fade button on hover */
+}
+
+
+
+p.dark-mode {
+    color: #e0e0e0; /* Light text for paragraphs in dark mode */
+}
+
+p.high-contrast {
+    color: yellow; /* Yellow text for paragraphs in high contrast mode */
 }

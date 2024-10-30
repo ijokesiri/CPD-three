@@ -6,21 +6,31 @@
     <title>Athlete Website: Home Page</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="default-mode">
     <a href="#main-content" class="skip-link">Skip to Main Content</a>
     <header>
+                <!-- Theme Toggle Buttons -->
+        <div class="theme-toggle">
+            <button id="default-mode-toggle">Default Mode</button>
+            <button id="dark-mode-toggle">Dark Mode</button>
+            <button id="high-contrast-toggle">High Contrast</button>
+        </div>
         <h1>Athlete Website</h1>
         <div class="topnav">
-            <a href="athletes.html">Athletes</a></li>
-            <a href="meets.html">Meets</a></li>
+            <a href="athletes.html">Athletes</a>
+            <a href="meets.html">Meets</a>
         </div>
     </header>
     <div id="main-content">
         <h2>Welcome to the Athlete Information Site</h2>
-        <p>This website provides information about athletes, their records, and upcoming meets.</p>
+        <p class="default-mode">This website provides information about athletes, their records, and upcoming meets.</p>
+        
     </div>
-    <footer>
+    <footer class="default-mode">
         <p>Skyline High School</p>
     </footer>
+
+    <!-- Link to External JavaScript File -->
+    <script src="js/script.js"></script>
 </body>
 </html>

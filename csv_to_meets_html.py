@@ -1,6 +1,3 @@
-import csv
-import os
-
 import os
 import csv
 import re
@@ -78,11 +75,13 @@ def csv_to_html(csv_filename, output_folder):
         <img src="../images/profiles/{profile_pic}" width="200" alt="Profile picture of {name}"> 
         <figcaption>{name}</figcaption>
     </figure>
-    <dl>
-        <dt>Place</dt><dd>{place}</dd>
-        <dt>Time</dt><dd>{time}</dd>
-        <dt>Grade</dt><dd>{grade}</dd>
-    </dl>
+        <div class="center-info">
+        <dl>
+            <dt>Place</dt><dd>{place}</dd>
+            <dt>Time</dt><dd>{time}</dd>
+            <dt>Grade</dt><dd>{grade}</dd>
+        </dl>
+    </div>
 </div>
 """
 
@@ -197,11 +196,6 @@ def create_meet_image_gallery(url):
     html_image_tags = generate_image_tags(selected_photos, folder_path)
     
     return html_image_tags
-
-# Example usage
-url = "https://www.athletic.net/CrossCountry/meet/235827/results/943367"
-html_gallery = create_meet_image_gallery(url)
-print(html_gallery)
 
 
 if __name__ == "__main__":
