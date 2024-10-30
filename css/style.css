@@ -1,7 +1,7 @@
 /* Global Styles */
 body {
     font-family: Arial, sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.5;
     margin: 0;
     padding: 0;
@@ -436,4 +436,34 @@ p.dark-mode {
 
 p.high-contrast {
     color: yellow; /* Yellow text for paragraphs in high contrast mode */
+}
+
+body {
+    font-size: 1rem;
+}
+
+.navbar ul {
+    flex-direction: column; /* Stack items vertically on mobile */
+}
+
+/* Tablet and above */
+@media (min-width: 768px) {
+    body {
+        font-size: 1.125rem; /* Adjust base font size */
+    }
+
+    .navbar ul {
+        flex-direction: row; /* Align items horizontally */
+    }
+
+    .athlete-card {
+        width: 45%; /* Two columns on tablets */
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .athlete-card {
+        width: 30%; /* Three columns on desktops */
+    }
 }
